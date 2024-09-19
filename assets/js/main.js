@@ -34,7 +34,7 @@ function updateMap(lat, lon) {
 
 function searchIp() {
   let ip = document.querySelector(".search input").value;
-  fetch(`http://ip-api.com/json/${ip}`)
+  fetch(`https://ip-api.com/json/${ip}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.status === "fail") {
