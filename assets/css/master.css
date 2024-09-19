@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  background-image: url("../images/pattern-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search {
+  position: relative;
+  left: -25px;
+}
+
+.search input {
+  padding: 15px;
+  width: 400px;
+  border: 10px;
+  line-height: 0;
+  border: 0;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.search input:focus-visible {
+  line-height: 0;
+  border: 0;
+  outline: none;
+}
+
+.search button {
+  padding: 16px 25px;
+  background-color: #3e3e3e;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: -1px;
+  border: 0;
+  cursor: pointer;
+}
+
+.search button i {
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  height: 150px;
+  background-color: #fff;
+  padding: 30px;
+  position: absolute;
+  top: 165px;
+  box-shadow: 0px 0px 1px #2e2d2d;
+  border-radius: 10px;
+  z-index: 9999;
+}
+
+.info div {
+  padding: 15px;
+  border-right: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.info div span {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.info .isp {
+  border: 0;
+}
+#map {
+  height: calc(100vh - 250px);
+  width: 100%;
+}
