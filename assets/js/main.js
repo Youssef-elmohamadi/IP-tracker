@@ -34,14 +34,21 @@ function updateMap(lat, lon) {
 
 function searchIp() {
   let ip = document.querySelector(".search input").value;
-  fetch(`http://ip-api.com/json/${ip}`)
+  fetch(`https://ipwhois.app/json/${ip}`)
     .then((response) => response.json())
     .then((data) => {
-      if (data.status === "fail") {
+      if (data.success === false) {
         alert("The site was not found for this IP");
       } else {
-        updateMap(data.lat, data.lon);
-        updateInfo(data);
+        updateMap(data.latitude, data.longitude);
+
+        document.querySelector(".info .address p").textContent = data.ip;
+        document.querySelector(
+          ".info .location p"
+        ).textContent = `${data.city}, ${data.country}`;
+        document.querySelector(".info .time-zone p").textContent =
+          data.timezone;
+        document.querySelector(".info .isp p").textContent = data.isp;
       }
     })
     .catch((error) => {
